@@ -1,9 +1,10 @@
-import express, { response } from 'express'
+import express from 'express'
 import connection from './database/db.js'
 import user from './models/User.js'
 import router from './routes/main.route.js'
 import { constants } from './services/utils/constants.js'
-
+import { response } from './services/utils/response.js'
+import { not_found } from './controllers/main.controller.js'
 const app = express()
 const port = process.env.PORT
 
@@ -15,9 +16,7 @@ app.use('/api', router)
 
 const {status} = constants.response
 
-app.get('*', (req, res) =>{
-  res.status(status.not_found).json(response(false, 'not found'))
-})
+app.get('*', not_found)
 // const first_user = new user({
 //   name: 'Jhon',
 //   nickname: 'jjatt',

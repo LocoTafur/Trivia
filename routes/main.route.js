@@ -1,11 +1,8 @@
 import { Router } from "express";
+import { test } from "../controllers/main.controller.js"
 
 const router = Router()
 
-router.get('/', (req, res) =>{
-    res.status(200).json({
-        server: true
-      })
-})
+router.get('/', test)
 
 export default router
