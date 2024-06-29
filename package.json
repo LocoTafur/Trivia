@@ -1,0 +1,21 @@
+{
+  "name": "trivia-backend",
+  "version": "1.0.0",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch --env-file .env app.js",
+    "start": "node --env-file .env.produccion app.js"
+  },
+  "keywords": [
+    "trivia",
+    "game"
+  ],
+  "author": "Juan Teheran",
+  "license": "MIT",
+  "description": "Game of Trivia",
+  "dependencies": {
+    "express": "4.19.2",
+    "mongoose": "^8.4.4"
+  }
+}
