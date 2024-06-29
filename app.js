@@ -14,9 +14,8 @@ await connection()
 
 app.use('/api', router)
 
-const {status} = constants.response
-
 app.get('*', not_found)
+
 // const first_user = new user({
 //   name: 'Jhon',
 //   nickname: 'jjatt',
